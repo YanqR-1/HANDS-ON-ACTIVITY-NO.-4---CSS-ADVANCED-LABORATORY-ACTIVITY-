@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced CSS Sample Output</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="header">
+  <h1 class="logo"><span style='font-size:30px;'>&#128722;</span>Tech Mart</h1>
+<div>
+  <button class="Login btn-primarys">Log In</button>
+  <button class="Cart">Cart</button>
+</div>  
+</header>
+
+<div class="space" style="background-image: url(https://media.gettyimages.com/id/501571915/video/stage-lights.jpg?s=640x640&k=20&c=5FES7R-l5MkprPmYJ-bQBg0tRkNKIi8M_LEZoxGxmgc=);">
+<section class="hero">
+  <h1 class="hero-title">Big <span>Weekend Sale</span> on Gadget</h1>
+  <p class="hero-desc">Up to 40% off on selected gadget. Limited stock only.</p>
+  <button class="btn-primary">Start Learning</button>
+</section>
+</div>
+<section class="hero">
+    <h2>Filtered By</h2>
+    <nav>
+      <a class="btn-primarys" href="#laptop">Laptops</a>
+      <a class="btn-primarys" href="#cp">Smartphones</a> 
+      <a class="btn-primarys" href="#acc">Accessories</a> 
+      <a class="btn-primarys"href="#wear">Wearables</a>
+</section>
+
+<section class="features">
+  <h2 class="section-title">Features Products</h2>
+
+  <div class="grid">
+    <div class="card">
+      <img class="Image" src="laptop.webp" alt="">
+      <h3 id="laptop">ASUS ROG Strix SCAR 18</h3>
+      <p>ASUS ROG Strix SCAR 18 G835LX-SA139WSM GeForce RTX™ 5090 Intel® Core™ Ultra 9 Laptop (Off Black)</p>
+      <button class="btn-primarys adcart" id="Added">Add to Cart</button>
+    </div>
+
+    <div class="card">
+      <img class="Image" src="cp.jpg" alt="">
+      <h3 id="cp">Asus Rog Phone 9 Pro</h3>
+      <p>16gb/512gb 6.8 Black</p>
+      <button class="btn-primarys adcart" id="Added">Add to Cart</button>
+    </div>
+
+    <div class="card">
+      <h3 id="acc">Accessories</h3>
+      <img class="Image" src="iw.webp" alt="">
+      <p>Apple Watch Series 10 with Sport Band</p>
+      <button class="btn-primarys adcart" id="Added">Add to Cart</button>
+    </div>
+
+    <div class="card">
+      <h3 id="wear">Accessories</h3>
+      <img class="Image" src="wear.webp" alt="">
+      <p>Trendy Hat One Piece Luffy The Same Straw Hat Cowboy Anime Cosplay Props Accessories Beach Hat Cowboy Hat_ADU341</p>
+      <h4 style="display: left;">₱</h4>
+      <button class="btn-primarys adcart" id="Added">Add to Cart</button>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.getElementById("Added").onclick = function () {
+    document.body.classList.toggle("dark");
+  };
+</script>
+
+</body>
+</html>

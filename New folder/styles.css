@@ -1,0 +1,245 @@
+/* ================================
+   1. CSS VARIABLES (THEMING)
+================================ */
+:root {
+  --bg: #ffffff;
+  --text: #222;
+  --primary: #1e90ff;
+  --accent: #ff6b6b;
+  --radius: 300px;
+  --color: white;
+  --hdc: #1e90ff;
+
+  /* Fluid Typography */
+  --title-size: clamp(2rem, 6vw, 4rem);
+  --subtitle-size: clamp(1rem, 3vw, 1.5rem);
+}
+
+body.dark {
+  --bg: #111;
+  --text: #eee;
+  --primary: #0d6efd;
+  --accent: #ff8787;
+  --color: black;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+/* ================================
+   2. HEADER (Flexbox)
+================================ */
+.header {
+  justify-content: space-between;
+  display: flex;
+  columns: 2;
+  align-items: center;
+  padding: 1.2rem 2rem;
+}
+
+.logo {
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+}
+.Login {  padding: 0.5rem 1rem;
+  display: left;
+  color: var(--text);
+  border-radius: var(--radius);
+  background: var(--color);
+  border: 2px solid lightgray;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.Cart {
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  background: var(--primary);
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.toggle-theme:hover {
+  transform: rotate(20deg);
+}
+
+/* ================================
+   3. HERO SECTION
+================================ */
+.hero {
+  text-align: left;
+  padding: 5rem 2rem;
+}
+.space {
+    margin: 30px;
+    border-radius: 20px;
+}
+nav a {
+    margin: 15px;
+    padding: 10px;
+    text-decoration: none;
+    color: var(--text);
+    border-radius: var(--radius);
+    background: var(--color);
+    border: 2px solid lightgray;
+}
+.hero-title {
+  text-align: left;
+  color: white;
+  font-size: var(--title-size);
+  margin: 0;
+}
+
+.hero-title span {
+  color: goldenrod;
+}
+
+.hero-desc {
+  text-align: left;
+  color: var(--color);
+  font-size: var(--subtitle-size);
+  max-width: 600px;
+  opacity: 0.9;
+}
+
+/* ================================
+   4. BUTTON (Animations + Transitions)
+================================ */
+.btn-primary {
+  padding: 0.8rem 2rem;
+  font-size: 1.1rem;
+  background: var(--primary);
+  border: none;
+  border-radius: var(--radius);
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+  animation: fadeInUp 1s ease;
+}
+
+.btn-primary:hover {
+  background: var(--accent);
+  transform: translateY(-4px) scale(1.05);
+}
+
+.btn-primarys:hover {
+  background: lightgreen;
+  transform: translateY(-4px) scale(1.05);
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================================
+   5. FEATURES SECTION
+================================ */
+.features {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.adcart {
+    border-radius: 20px;
+    width: 300px;
+    height: 50px;
+}
+.section-title {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  margin-bottom: 2rem;
+}
+
+/* ================================
+   6. CSS GRID (Responsive)
+================================ */
+.grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  padding: 1rem;
+}
+
+/* ================================
+   7. CARDS (Pseudo-element + Hover)
+================================ */
+.card {
+  text-align: left;
+  background: var(--bg);
+  padding: 2rem;
+  border-radius: 20px;
+  border: 2px solid var(--primary);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.4s ease, border-color 0.4s ease;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  height: 6px;
+  width: 100%;
+  background: var(--accent);
+  top: 0;
+  left: -100%;
+  transition: left 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  border-color: var(--accent);
+}
+
+.card:hover::before {
+  left: 0;
+}
+
+.card h3 {
+  margin-top: 0;
+  color: var(--primary);
+}
+
+.card h4{
+    text-align: left;
+}
+/* ================================
+   8. MEDIA QUERY EXAMPLE
+================================ */
+@media (max-width: 480px) {
+  .hero {
+    padding: 3rem 1rem;
+  }
+
+  .btn-primary {
+    width: 100%;
+  }
+}
+
+.Image {
+    width: 300px;
+    height: 150px;
+    border-radius: 30px;
+    display: flex;
+}
+
+#laptop{
+    color:#111
+}
+#cp{
+    color:#111
+}
