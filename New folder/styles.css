@@ -242,19 +242,10 @@ nav a {
     box-sizing: border-box;
 }
 
+.decs {
+  color: gray;
+}
 
-#laptop{
-    color:#111
-}
-#cp{
-    color:#111
-}
-#acc{
-    color:#111
-}
-#wear{
-    color:#111
-}
 strike {
     color: gray;
 }
