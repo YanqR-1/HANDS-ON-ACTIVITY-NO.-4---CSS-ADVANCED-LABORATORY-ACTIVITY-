@@ -51,7 +51,7 @@ body {
   display: left;
   color: var(--text);
   border-radius: var(--radius);
-  background: var(--color);
+  background: white;
   border: 2px solid lightgray;
   cursor: pointer;
   transition: transform 0.3s;
